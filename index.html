@@ -78,11 +78,13 @@
 </body>
 </html>
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll("custom-card").forEach(card => {
-        card.addEventListener("cardClick", (event) => {
-            alert("Has seleccionado: " + event.detail);
-        });
-    });
-});
+  document.addEventListener("DOMContentLoaded", function() {
+      const cards = document.querySelectorAll('.card');
+
+      cards.forEach(card => {
+          card.addEventListener('click', function() {
+              alert('Has hecho clic en: ' + this.querySelector('.card-title').innerText);
+          });
+      });
+  });
 </script>
