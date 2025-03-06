@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parcial</title>
+    <link rel="stylesheet" href="stilo.css">
+    <link rel="stylesheet" href="funcion.js">
     <link rel="icon" type="image/png" href="descarga.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
@@ -11,16 +13,59 @@
     <nav class="navbar navbar-expand-lg bg-primary">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center text-white" href="#">
-                <img src="descarga.png" alt="Logo UGB" width="50" class="me-2">
+                <img src="img/descarga.png" alt="Logo UGB" width="50" class="me-2">
                 <h1 class="h4 mb-0">Universidad Gerardo Barrios</h1>
             </a>
             <div class="ms-auto text-white d-flex flex-column text-end">
                 <span>Nombre: Carlos Arnoldo Romero Espinal</span>
                 <span>Código: SMSS074823</span>
+                <span>Nombre: Fabiola Alejandra Benitez Osorto</span>
+                <span>Código: SMSS111223</span>
             </div>
         </div>
     </nav>
-
+    <center>
+    <div class="card mb-3" style="max-width: 540px; margin: 2%;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="img/17409662033143.jpg" style="height: 200px;" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Mejor pelicula</h5>
+              <p class="card-text">Anora retrata la historia de una joven stripper que se involucra con un hijo de un poderoso oligarca de Moscú. La relación entre Ani y Vanya transcurre en un contexto de lujos y excesos, con fiestas, drogas y viajes en jets privados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3" style="max-width: 530px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="img/descarga.jpg" style="width: 200px; height: 300px;"alt="..." >
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Mejor actor</h5>
+              <p class="card-text">El actor estadounidense Adrien Brody se convirtió en el centro de atención tras conquistar el premio Oscar a Mejor actor por su personaje en “El Brutalista”. Y es que, no solo se llevó la segunda estatuilla de su carrera, sino que rompió un récord al realizar el discurso de aceptación más extenso de la historia. "Diario El Comercio. Todos los derechos reservados."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="img/descarga (1).jpg" style="height: 170px;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">mejor actriz</h5>
+              <p class="card-text">Mickey Madison interpretó a una trabajadora sexual que impulsivamente se casa con el hijo de un oligarca ruso y aprende duras lecciones sobre la división entre ricos y pobres.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </center>
     <footer>
         <ul>
             <li>Materia: Programación IV</li>
@@ -32,38 +77,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
-
-<style>
-    body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh; /* Altura mínima igual al alto de la ventana */
-        margin: 0;
-    }
-
-    nav img {
-        width: 26%;
-    }
-
-    nav h1 {
-        font-size: 1.5rem;
-    }
-
-    footer {
-        background-color: rgb(53, 15, 219);
-        color: aliceblue;
-        text-align: center;
-        padding: 15px;
-        height: 5%;
-        margin-top: auto; /* Empuja el footer hacia abajo */
-    }
-
-    footer ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    footer ul li {
-        margin: 5px 0;
-    }
-</style>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("custom-card").forEach(card => {
+        card.addEventListener("cardClick", (event) => {
+            alert("Has seleccionado: " + event.detail);
+        });
+    });
+});
+</script>
